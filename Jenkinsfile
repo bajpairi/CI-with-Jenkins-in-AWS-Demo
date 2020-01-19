@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                echo 'Building from Git repo'
+		mvn package
             }
         }
         stage('Test') {
